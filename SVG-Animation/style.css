@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#tree{
+    animation: tree 1.5s infinite alternate;
+    transform-origin: center;
+}
+#fire{
+    animation: fire 0.5s infinite alternate;
+    transform-origin: bottom;
+    transform-box: fill-box;
+}
+
+@keyframes tree{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(3deg);
+    }
+}
+@keyframes fire{
+    from{
+        transform:  translateX(0%)  rotateZ(0deg) translateY(0%);
+    }
+    to{
+        transform:  translateX(2%)  rotateZ(-2deg) translateY(2%);
+    }
+}
